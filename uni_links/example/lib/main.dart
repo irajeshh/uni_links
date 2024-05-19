@@ -24,8 +24,8 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
 
   final _scaffoldKey = GlobalKey();
   final _cmds = getCmds();
-  final _cmdStyle = const TextStyle(
-      fontFamily: 'Courier', fontSize: 12.0, fontWeight: FontWeight.w700);
+  final _cmdStyle =
+      const TextStyle(fontFamily: 'Courier', fontSize: 12.0, fontWeight: FontWeight.w700);
 
   @override
   void initState() {
@@ -196,7 +196,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               '(tap on any of the above commands to print it to'
               ' the console/logger and copy to the device clipboard.)',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.caption,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ]
         ].expand((el) => el).toList(),
@@ -222,7 +222,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   }
 
   void _showSnackBar(String msg) {
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       final context = _scaffoldKey.currentContext;
       if (context != null) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
