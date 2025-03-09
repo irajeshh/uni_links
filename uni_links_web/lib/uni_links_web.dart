@@ -1,4 +1,4 @@
-import 'package:web/web.dart' as web;
+import 'package:universal_web/web.dart' as web;
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:uni_links_platform_interface/uni_links_platform_interface.dart';
 
